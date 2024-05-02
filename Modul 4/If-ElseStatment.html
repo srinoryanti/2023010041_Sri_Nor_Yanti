@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contoh Flowchart Menentukan Bilangan Genap atau Ganjil</title>
+    </head>
+    <body>
+        <h1>Flowchart Menentukan Bilangan Genap atau Ganjil</h1>
+        <p>Masukkan Sebuah Bilangan:</p>
+        <input type="number" id="inputNumber">
+        <button onclick="cekNumber()">Cek</button>
+        <p id="outputMessage"></p>
+
+        <script>
+            function cekNumber() {
+                //Mendapatkan nilai bilangan dari input
+                let number = document.getElementById("inputNumber").value;
+
+                //mengecek Apakah Bilangan itu Genap atau Ganjil
+                if (number % 2 == 0 ) {
+                    document.getElementById("outputMessage").innerHTML = "Bilangan " + number + " adalah Bilangan Genap.";
+                } else {
+                    document.getElementById("outputMessage").innerHTML = "Bilangan " + number + " adalah Bilangan Ganjil.";
+                }
+            }
+        </script>
+    </body>
+</html>
