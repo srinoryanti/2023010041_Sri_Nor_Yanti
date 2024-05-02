@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Contoh Program Truthy & Falsy</title> 
+    </head>
+    <body>
+        <h1>Program Truthy & Falsy</h1>
+        <h4>Contoh Program Truthy dan Falsy Pada Menu Kasir</h4>
+        <p id="DaftarMenu"></p>
+
+        <label for="Menu">Pilih Menu Makanan :</label>
+        <input type="number" id="Menu"><br>
+        <button type="button" onclick="Pesan()">Pesan</button>
+        <p id="Hasil"></p>
+
+        <script>
+            document.getElementById("DaftarMenu").innerHTML = "Daftar Menu Seblak : <br>1. Seblak Original 10000<br>2. Seblak Sosis 15000<br>3. Seblak Bakso 16000<br>4. Seblak Ceker 18000<br>5. Seblak Spesial 20000";
+            function Pesan() {
+                var Menu = parseInt(document.getElementById("Menu").value);
+                var Hasil = document.getElementById("Hasil");
+                if(Menu==1) {
+                    Hasil.innerHTML = "Total Pesanan 10000<br><h4>Silakhkan Ditunggu Pesanannya</h4>";
+                  } else if (Menu==2) {
+                    Hasil.innerHTML = "Total Pesanan 15000<br><h4>Silahkan Ditunggu Pesanannya</h4>";
+                  } else if (Menu==3) {
+                    Hasil.innerHTML = "Total Pesanan 16000<br><h4>Silahkan Ditunggu Pesanannya</h4>";
+                  } else if (Menu==4) {
+                    Hasil.innerHTML = "Total Pesanan 18000<br><h4>Silahkan Ditunggu Pesanannya</h4>";
+                  } else if (Menu==5) {
+                    Hasil.innerHTML = "Total Pesanan 20000<br><h4>Silahkan Ditunggu Pesanannya</h4>";
+                  } else if (Menu>=6 || Menu<=0) {
+                    Hasil.innerHTML = "<h4>Input Yang Anda Masukkan Salah</h4>";
+                  } else {
+                    Hasil.innerHTML = "<h4>Pilih Pesanan Anda Dulu</h4>" +Menu;
+                  }
+
+            }
+        </script>
+</html>
