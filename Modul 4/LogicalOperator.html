@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contoh Program Logical Operator</title>
+    </head>
+    <body>
+    <h1>Program Logical Operator</h1>
+
+    <script>
+        //deklarasi dari logical operator
+        let x = 12;
+        let y = 18;
+        let AND1 = x < 15 && y > 10;
+        let AND2 = x > 15 && y > 10;
+        let OR1 = x < 15 || y > 10;
+        let OR2 = x > 15 || y > 10;
+        let NOT1 = !(x < 15);
+        let NOT2 = !(x < 15 && y > 10);
+
+        //menampilkan hasil dari logical operator di WEB
+        document.write("Menampilkan hasil dari logical operator di WEB : "+"<br>");
+        document.write("AND 1 : " + AND1 + "<br>"
+                         + "AND 2 : " +  AND2 + "<br>"
+                          + "OR 1 : " +  OR1 + "<br>" 
+                          + "OR 2 : " + OR2 + "<br>"
+                           + "NOT 1 : " + NOT1 + "<br>" 
+                           + "NOT 2 : " + NOT2 + "<br>");
+    </script>
+</html>
