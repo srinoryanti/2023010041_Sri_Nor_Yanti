@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Logika If dengan Evaluasi Nilai Score</title>
+</head>
+
+<body>
+    <h1>Program Logika If dengan Evaluasi Nilai Score</h1>
+    <h4>Masukkan Data Anda Dengan Benar</h4>
+    <label for="Nama">Masukkan Nama Siswa     : </label>
+    <input type="text" id="Name"><br><br>
+    <label for="NIM">Masukkan NIM Siswa        : </label>
+    <input type="text" id="NIMSiswa"><br><br>
+    <label for="Nilai">Masukkan Nilai  : </label>
+    <input type="Number" id="Nilai"><br><br>
+    <button type="button" onclick = "evaluasiNilai()">Cek Hasil</button><br><hr>
+    <p id="Nama"></p>
+    <p id="NIM"></p>
+    <p id="Hasil"></p><hr>
+
+
+<script>
+    function evaluasiNilai() {
+        // mendapatkan nilai score dari input
+        var Nama = document.getElementById("Name").value;
+        document.getElementById("Nama").innerHTML = "Nama Siswa : " + Nama;
+        var NIM = document.getElementById("NIMSiswa").value;
+        document.getElementById("NIM").innerHTML = "NIM Siswa : " + NIM;
+        var Nilai = parseInt(document.getElementById("Nilai").value);
+        var Hasil = document.getElementById("Hasil");
+        
+        // evaluasi score dengan if-else
+        if (Nilai >= 90 && Nilai <= 100) {
+            Hasil.innerHTML = "Selamat! Anda Mendapatkan Nilai A  dengan Score : " +Nilai;
+        } else if (Nilai >= 80 && Nilai <= 89) {  
+            Hasil.innerHTML = "Anda Mendapatkan Nilai B dengan Score : " +Nilai;
+        } else if (Nilai >= 70 && Nilai <= 79) {
+            Hasil.innerHTML = "Anda Mendapatkan Nilai C dengan Score : " +Nilai;
+        } else if (Nilai >= 60 && Nilai <= 69) {
+            Hasil.innerHTML = "Anda Mendapatkan Nilai D dengan Score : " +Nilai;
+        } else if (Nilai >= 0 && Nilai <= 59) {
+            Hasil.innerHTML = "Anda Mendapatkan Nilai E dengan Score : " +Nilai;
+        } else if (Nilai <=-1 && Nilai >= 101){
+            Hasil.innerHTML = "<h4>Input Yang Anda Masukkan Salah</h4>";
+        }else{
+            Hasil.innerHTML = "Masukkan Nilai anda Terlebih Dahulu "+Nilai;
+        }  
+    }
+</script>
+
+</body>
+</html>
