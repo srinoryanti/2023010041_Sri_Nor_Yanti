@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contoh Program While and do - While</title>
+    </head>
+    <body>
+        <h1>Program While and do - While</h1>
+        <p>Berikut adalah nama saya disertai nomor :</p>
+        <ul id="nama-list"></ul>
+    <script>
+        //deklarasi perulangan menggunakan while pada halaman WEB
+       let i =1;
+       let namaList1 = document.getElementById("nama-list");
+
+        while (i <= 25) {
+            let ListItem = document.createElement("li");
+            ListItem.innerHTML = `Sri Nor Yanti (${i})`;
+            namaList1.appendChild(ListItem);
+            i++;
+        }
+
+    
+        //deklarasi perulangan menggunakan do-while pada halaman WEB
+       let a = 1;
+       let namaList2 = document.createElement("nama-list");
+       
+        do {
+            let ListItem = document.createElement("li");
+            ListItem.innerHTML = `Sri Nor Yanti (${i})`;
+            namaList2.appendChild(ListItem);
+            a++;
+        } while (a <= 25);
+    </script>
+</html>
