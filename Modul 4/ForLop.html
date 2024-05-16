@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Program Menampilkan Nama dengan For Loop</title>
+    </head>
+    <body>
+        <h1>Program Menampilkan Nama dengan For Loop</h1>
+        <p>Berikut adalah nama saya sebanyak 50 kali :</p>
+        <ul id="nama-list"></ul>
+
+        <script>
+            let nama = "Sri Nor Yanti";
+            let namalist = document.getElementById("nama-list");
+
+            for (let i = 50; i > 0; i--) {
+                let ListItem = document.createElement("li");
+                ListItem.innerHTML = `${i}. ${nama}`; 
+                namalist.appendChild(ListItem);
+            }
+        </script>
+    </body>
+</html>
