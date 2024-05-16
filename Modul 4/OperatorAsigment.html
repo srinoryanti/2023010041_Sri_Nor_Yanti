@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contoh Tipe Data Assignment Operator</title>
+    </head>
+</head>
+<body>
+    <h1>Tipe Data Assignment Operator</h1>
+    <p>Nilai a = 20.5, b = 7, dan c = 35</p>
+    <p id ="myoutput"></p>
+
+    <script>
+        // Mendefinisikan variabel a, b, dan c
+        let a = 20.5;
+        let b = 7;
+        let c = 35;
+
+        // menggunakan Assignment operator untuk melakukan operasi arithmatika pada variabel a, b, dan c
+         let penjumlahan = a += b += c;
+         let pengurangan = a -= b -= c;
+         let perkalian = a *= b *= c;
+         let pembagian = a /= b /= c;
+         let hasilBagi = a %= b %= c;
+
+         // Menampilkan hasil arithmatika pada halaman WEB
+         document.getElementById("myoutput").innerHTML = "Penjumlahan = " + penjumlahan + "<br>" 
+                                                        + "Pengurangan = " + pengurangan + "<br>"
+                                                         + "Perkalian = " + perkalian + "<br>"
+                                                          + "Pembagian = " + pembagian + "<br>"
+                                                           + "HasilBagi = " + hasilBagi;
+         </script>
+</html>
