@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Studi Kasus Toko Handphone</title>
+        <style type="text/css">
+            body { 
+                font-family: arial, sans-serif;
+                background-color: #f2f2f2;
+            }
+            .container {
+                max-width: 800px;
+                margin: auto;
+                padding: 20px;
+                background-color: #85a190;
+                box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+            }
+            h1 {
+                text-align: center;
+                color: #008080;
+                margin-top: 0px;
+                margin-bottom: 20px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+            th, td {
+                padding: 10px;
+                text-align: left;
+            }
+            th {
+                background-color: #008080;
+                color: #fff;
+            }
+            tr:nth-child(even){
+                background-color: #f2f2f2;
+            }
+            .subtotal {
+                text-align: right;
+                font-weight: bold;
+                font-size: 18px;
+                color: #008080;
+            }
+            .btn {
+                background-color: #008080;
+                color: #fff;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .btn:hover { 
+                background-color: #006666;
+            }
+            .form-input {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #accc;
+                border-radius: 5px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+            </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Yanti Phone</h1>
+            <form>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" /><br /><br />
+
+                <label for="no-hp">No. HP:</label>
+                <input type="text" id="no-hp" name="no-hp" /><br /><br />
+
+                <label for="barang">Pilih Barang:</label>
+                <select id="barang">
+                    <option value="iPhone 14 Promax">iPhone 14 Promax (Rp. 15.990.000)</option>
+                    <option value="iPhone 13 Promax">iPhone 13 Promax (Rp. 13.500.000)</option>
+                    <option value="iPhone 11">iPhone 11 (Rp. 2.564.999)</option>
+                    <option value="iPhone XR">iPhone XR (Rp. 2.350.000)</option>
+                    <option value="Samsung Galaxy S23 Ultra">Samsung Galaxy S23 Ultra (Rp. 5.000.000)</option>
+                    <option value="Samsung Galaxy A55">Samsung Galaxy A55 (Rp. 5.599.0000)</option>
+                    <option value="Vivo Y22">Vivo Y22 (Rp. 2.022.000)</option>
+                    <option value="Vivo Y15s">Vivo Y15s (Rp. 1.414.000)</option>
+                    <option value="Oppo A57">Oppo A57 (Rp. 2.099.000)</option>
+                    <option value="Oppo A17">Oppo A17 (Rp. 1.580.000)</option>
+                </select><br /><br />
+
+                <label for ="jumlah">Jumlah:</label>
+                <input type="number" id="jumlah" name="jumlah" /><br /><br />
+
+                <input type="button" value="Tambahkan ke Keranjang" onclick="tambahkanKeranjang()" />
+                <input type="button" value="Batal" onclick ="batal()" /><br /><br />
+
+                <input type="checkbox" id="member" name="member" onclick="ubah()" /> Member Discount (10%)<br /><br /><br />
+
+                <table id="keranjang">
+                    <thead>
+                        <tr>
+                            <th>Barang</th>
+                            <th>Jumlah</th>
+                            <th>Harga Satuan</th>
+                            <th>Subtotal</th>    
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspon="3" class="subtotal">Total:</td>
+                            <td class="subtotal" id="total">Rp 0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <input type="submit" value="Beli Sekarang" class="btn" />
+                <input type="reset" value="Bersihkan" class="btn" />
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            var keranjang =[];
+
+            function tambahkanKeranjang() {
+                var barang = document.getElement("barang").value
+                var jumlah = parseInt(document.getElementById("jumlah").value);
+                var harga = 0;
+                switch (barang){
+                    case "iPhone 14 Promax":
+                        harga = 15990000;
+                        break;
+                    case "iPhone 13 Promax":
+                        harga = 13500000;
+                        break;
+                    case "iPhone 11":
+                        harga = 2564999;
+                        break;
+                    case "iPhone XR":
+                        harga = 2350000;
+                        break;
+                    case "Samsung Galaxy S23 Ultra":
+                        harga = 5000000;
+                        break;
+                    case "Samsung Galaxy A55":
+                        harga = 5599000;
+                        break;
+                    case "Vivo Y22":
+                        harga = 2022000;
+                        break;
+                    case "Vivo Y15s":
+                        harga = 1414000;
+                        break;
+                    case "Oppo A57":
+                        harga = 2099000;
+                        break;
+                    case "Oppo A17":
+                        harga = 1580000;
+                        break;
+
+                }
+                var subtotal = jumlah * harga;
+                var item = {
+                    barang: barang,
+                    jumlah: jumlah,
+                    harga: harga,
+                    subtotal: subtotal
+                };
+                keranjang.push(item);
+                tampilkanKeranjang();
+            }
+
+            function tampilkanKeranjang() {
+                var tbody = 
+            }
+        </script>
+    </body>
+</html>

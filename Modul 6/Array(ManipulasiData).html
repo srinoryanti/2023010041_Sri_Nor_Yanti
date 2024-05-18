@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Contoh Program Array Manipulasi Data</title>
+    </head>
+    <body>
+        <h1>PROGRAM ARRAY MANIPULASI DATA PADA HALAMAN WEB</h1>
+
+        <script>
+            var Data = ["Yanti", "Rira", "Susi", "Serli", "Byla"];
+            var Hobi = ["Membaca", "Menulis", "Memasak", "Bersepeda", "Berenang"];
+                 document.write("Array Data dari = <li>"+Data+"<br>Array Hobi dari = <li>"+Hobi);
+            var push = Data.push("Susi", "Rira");
+                 document.write("<hr><h4>Kita akan menambah data Susi dan Rira menggunakan push</h4>"+
+                 "Range array bertambah dari 5 data menjadi "+push+" data<br>Data = "+Data+"<br><hr>");
+            var pop = Hobi.pop();
+                 document.write("<h4>Kita akan menghapus data element terakhir menggunakan pop</h4>"+
+                 "Range array terakhir yang kita ambil adalah "+pop+"<br>data Hobi = "+Hobi+"<br><hr>");
+            var shift = Data.shift();
+                 document.write("<h4>Kita akan mengeluarkan element pertama menggunakan shift</h4>"+
+                 "Range array pertama yang kita ambil adalah "+shift+"<br>Data = "+Data+"<br><hr>");
+            var unshift = Hobi.unshift("Menyanyi");
+                 document.write("<h4>Kita akan menambahkan element pertama menggunakan unshift</h4>"+
+                 "Jadi data "+pop+" yang sudah kita ambil sebelumnya akan kita tambah data (Menyanyi)<br>data Hobi = "+Hobi+"<br><hr>");
+            delete Data[2];
+                 document.write("<h4>Kita akan mengeluarkan element yang kita inginkan menggunakan delete</h4>"+
+                 "Range array dari shift yang akan kita ambil adalah (serli)<br>Data = "+Data+"<br><hr>");
+            var splice = Hobi.splice(4, 1);
+                 document.write("Kita akan menghapus element dari dari seri ke 4 sebanyak 1 kali menggunakan splice</h4>"+
+                 "Jadi data yang akan kita hapus adalah (Berenang dan Menulis)<br>data Hobi = "+Hobi+"<br><hr>");
+        </script>
+    </body>
+</html>

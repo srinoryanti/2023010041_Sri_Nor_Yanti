@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contoh Program Object 2 const</title>
+    </head>
+    <body>
+        <h1>PROGRAM OBJECT PADA HLAMAN WEB</h1>
+        <h2>Biodata dan Profil</h2>
+
+        <script>
+            const biodata ={
+              Name: "Sri Nor Yanti",
+              Age: 18,
+              NIM: 2023010041,
+              TTL: "Kudus, 21 Agustus 2005",
+              Email: "yantisrinoor@gmail.com",
+              
+            };
+
+            const prodi ={
+              Prodi: "Rekayasa perangkat Lunak",
+              Jenjang: "D4",
+              Semester: "2(Dua)",
+              NamaPerguruan: "Politeknik Balekambang Jepara",
+              TahunMasuk: 2023,
+            };
+
+            document.write(`Nama : ${biodata.Name}<br>
+                            Umur : ${biodata.Age}<br>
+                            NIM : ${biodata.NIM}<br>
+                            TTL : ${biodata.TTL}<br>
+                            Email : ${biodata.Email}<br>
+                            Prodi : ${prodi.Prodi}<br>
+                            Jenjang : ${prodi.Jenjang}<br>
+                            Semester : ${prodi.Semester}<br>
+                            Nama Perguruan : ${prodi.NamaPerguruan}<br>
+                            Tahun masuk : ${prodi.TahunMasuk}<br>`);
+        </script>
+        
+    </body>
+</html>

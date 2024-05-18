@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contoh Program Menggunakan Spread Operator</title>
+    </head>
+    <body>
+        <h1>PROGRAM SPREAD OPERATOR 2 ARRAY</h1>
+        <script>
+            const arr1 = [ "Nama : ", "NIM : ","TTL : ", "Prodi : ", "Semester : ", "Perguruan Tinggi : "];
+            const arr2 = [ "Sri Nor Yanti", "2023010041", "Kudus, 21 Agustus 2005", "Rekayasa Perangkat Lunak", "2", "Politeknik Balekambang jepara"];
+            for(var i=0; i<11; i++){
+                document.write(...arr1[i],...arr2[i]+"<br>");
+            }
+        </script>
+    </body>
+</html>
