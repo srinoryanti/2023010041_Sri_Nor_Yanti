@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Penentuan Nilai Mahasiswa</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="hero">
+            <div id="loginContainer">
+                <h1>LOGIN</h1><br/>
+                <div class="logoContainer">
+                    <img src="logoPolibang.png" alt="logo" class="logo">
+            </div>
+            <form class="formlogin" id="loginForm">
+                <b>Username:</b>
+                <input class="textlogin" type="text1" id="username" required>
+
+                <b>Password:</b>
+                <input type="password" id="password" required>
+
+                <button type="submit">Login</button>
+                </form>
+            </div>
+
+            <div id="contentContainer" class="hero" style="display: none;">
+            <h1>Penentuan Nilai Mahasiswa</h1>
+            <form class="form" id="nilaiForm">
+                <label for="nim">NIM:</label>
+                <input type="text" id="nim required>
+
+                <label for="nama">Nama:</label>
+                <input type="number" id="nilai" required>
+
+                <label for="nilai">Nilai:</label>
+                <input type="number" id="nilai" required>
+
+                <label for="mataKuliah">Mata Kuliah:</label>
+                <select id="mataKuliah">
+                    <option value="">-- Pilih Mata Kuliah --</option>
+                    <option value="Pemrograman Komputer">Pemrograman Komputer</option>
+                    <option value="Kalkulus">Kalkulus</option>
+                    <option value="Sistem Operasi">Sistem Operasi</option>
+                    <option value="Matematika Diskrit">Matematika Diskrit</option>
+                    <option value="Algoritma dan Struktur Data">Algoritma dan Struktur Data</option>
+                    <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
+                    <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                    <option value="Desain Perangkat Lunak">Desain Perangkat Lunak</option>
+                    <option value="Arsitektur Komputer">Arsitektur Komputer</option>
+                    <option value="Analisis Kebutuhan Perangkat Lunak">Analisis Kebutuhan Perangkat Lunak</option>
+                </select><br/>
+
+                <div id="navigationButtons">
+                <button type="button" onclick="tampilNilai()">Tampil</button>
+                <button type="button" onclick="resetFormTable()">Reset</button>
+                </div>
+                </form>
+                <div id="output">
+                    <table id="hasilTable">
+                        <thead>
+                            <tr>
+                                <th>NIM</th>
+                                <th>Nama</th>
+                                <th>Nilai</th>
+                                <th>Mata Kuliah</th>
+                                <th>Nilai Huruf</th>
+                                <th>Index</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="hasilBody"></tbody>
+                    </table>
+                    <div id="navigationButtons">
+                        <a href="array.html"><button type="button">ARRAY</button></a>
+                        <a href="profil.html"><button type="button">PROFIL</button>/a>
+                        <a href="indeks.html"><button type="button">SIGN OUT>/button></a>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+                <script src="script.js"></script>
+    </body>
+</html>
