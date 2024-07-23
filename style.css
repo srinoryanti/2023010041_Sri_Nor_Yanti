@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.hero{
+    height: 100vh;
+    display: grid;
+    width: 100%;
+}
+.container{
+    background-image: url(image/bgTampilan.png);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container img{
+    margin-top: 280px;
+    height: 130px;
+    width: 130px;
+}
+.copyright{
+    width: 95%;
+    display: grid;
+    color: rgb(9, 130, 236);
+    position: fixed;
+    margin-right: 50px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    bottom: 25px;
+    font-size: 1.5rem;
+}
+
+
+.vertical-bar{
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.search-icon{
+    height: 65%;
+    width: 80px;
+}
+.search-icon .fa{
+    margin: 45px 23px;
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+.search-icon img{
+    width: 160px;
+    height: 160px;
+    margin: -25px -40px;
+    display: block;
+    cursor: pointer;
+}
+.social-icon{
+    height: 36.5%;
+    width: 80px;
+    background: rgb(173, 52, 207);
+    text-align: center;
+    padding-top: 15%;
+}
+.social-icon img{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.contents a{
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    margin: 0 10px;
+}
+.contents p{
+    text-align: right;
+    margin-top: 10px;
+}
+.nav-bar .fa{
+    display: none;
+}
+
+@media (max-width:700px) {
+    .vertical-bar{
+        display: none;
+    }
+    .banner-title{
+        margin: 80px 40px;
+    }
+    .banner-title h1{
+        font-size: 50px;
+    }
+    .notifications{
+        width: 100%;
+    }
+    .nav-bar{
+        padding: 10px 30px;
+    }
+    .fa-bars{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    .nav-bar .fa{
+        display: block;
+        color: #fff;
+        margin: 10px 25px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links{
+        height: 100vh;
+        width: 200px;
+        background: #000;
+        top: 0;
+        right: -200px;
+        position: absolute;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    .nav-links ul a{
+        display: block;
+    }
+    .nav-links .btn{
+        float: none;
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+}
+
