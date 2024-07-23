@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="asset-find/style.css">
+  <script src = "asset-find/Game.js"></script>
+</head>
+<div class="nav-logo">
+  <div><a href="../menugame.html"><img src="../image/back.gif"></a></div>
+  
+  </div>
+</div>
+<body onload= "generateFaces()">
+  <div id="container">
+    <div class="header">
+    <div class="variabel">
+        <span>Selamat Datang Dan Bermain "<span id="userName"></span>"</span>
+        <button id = "btn" onclick="location.reload()">Restart</button>
+        <p id = "stats"></p>
+      </div>
+    </div>
+    <div id="board-game">
+      <div id = "leftSide"></div>
+      <div id = "rightSide"></div>
+    </div>
+    <div id="gameOverPopup" class="popup">
+      <div class="popup-content">
+        <h2>Game Over</h2>
+        <p>Nama Pemain "<span id="userName-output"></span>"</p>
+        <p>level yang diraih <span id="levelSpan"></span></p>
+        <p>Score Total : <span id="scoreSpan"></span></p>
+        <button id="closeGameOverPopup">Close</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  // Kode JavaScript di otherpage.html
+  document.addEventListener('DOMContentLoaded', () => {
+    const userNameSpan = document.getElementById('userName');
+    const userName = localStorage.getItem('user_name');
+    const userNameoutput = document.getElementById('userName-output');
+    userNameoutput.textContent = userName ? userName : 'Guest';
+    userNameSpan.textContent = userName ? userName : 'Guest';
+  });
+</script>
+</html>
